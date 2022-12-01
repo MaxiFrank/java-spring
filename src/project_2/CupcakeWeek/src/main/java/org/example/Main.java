@@ -2,6 +2,7 @@ package org.example;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 class Cupcake {
@@ -191,11 +192,12 @@ public class Main {
         System.out.println(soda.getPrice());
         System.out.println(milk.getPrice());
 
+        ArrayList<Object> order = new ArrayList<Object>(cupcakeMenu);
+        order.add(drinkMenu);
 
-
-
-
-
+        new CreateFile();
+//        need to cast order to a list of array objects
+        new WriteToFile(order);
     }
 
 }
